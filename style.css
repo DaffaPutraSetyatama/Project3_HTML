@@ -1,141 +1,165 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --gray: #dedede;
 }
 
 body {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
     font-family: 'Mulish', sans-serif;
-    background-image: url(images-OurTeams/BackgroundLandingPage.jpg);
+    background-image: url(images/BackgroundLandingPage.jpg);
     background-size: 1600px 800px;
     background-size: cover;
     background-repeat: no-repeat;
-}
+    background-attachment: fixed;
+  }
 
-.navbar {
-    height: 85px;
-    display: flex;
-    padding: 0 10%;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-}
+.logo {
+    float: left;
+    margin-left: 100px;
+    padding: 0px 38px;
+    font-size: 15px;
+  }
 
-.navbar > h1 {
-    font-size: 32px;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-menu a {
+.logo a {
     text-decoration: none;
     color: white;
+  }
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    width: 100%;
 }
 
-.nav-menu a:hover {
+.nav ul {
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    margin-left: 350px;
+}
+
+.nav ul li a{
+    list-style: none;
+    display: inline-block;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    padding: 20px 20px;
+    margin: 0;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.nav ul li:hover {
     border-bottom: 3px solid white;
     transition: all .3s ease;
 }
 
-section .card .image {
-    height: 140px;
-    width: 140px;
-    border-radius: 50%;
-    padding: 3px;
-    background: rgb(140, 0, 255);
+.flex ul {
+    display: flex;
 }
 
-section .card .image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid white;
+.nav_demo {
+    float: right;
+    background: #c002fff6;
+    color: #fafafa;
+    padding: 20px 40px;
+    margin: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
 }
 
-.content {
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.description {
+    text-align: right;
     position: absolute;
-    height: 85vh;
-    left: 20%;
-    display: flex;
-    align-items: center;
+    top: 400%;
+    right: 53%;
 }
 
-.content2 {
+.description h2 {
+    color: white;
+    font-size: 35px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.description p {
+    color: var(--gray);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.description h3 {
+    color: white;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+.phone-pictures {
     position: absolute;
-    height: 85vh;
-    left: 41%;
-    display: flex;
-    align-items: center;
+    top: 190%;
+    left: 50%;
+    float: right;
 }
 
-.content3 {
+.phone-pictures img {
+    width: 75%;
+}
+
+.description-right {
+    text-align: left;
     position: absolute;
-    height: 85vh;
-    left: 62%;
-    display: flex;
-    align-items: center;
+    top: 380%;
+    left: 72%;
+    width: 355px;
+    transform: rotate(270deg);
 }
 
-.card {
-    position: relative;
-    background: white;
-    border-radius: 20px;
-    margin: 20px 0;
-    width: 280px;
+.description-right h1 {
+    color: white;
+    font-size: 27px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    height: 45%;
-    width: 100%;
-    background: rgb(140, 0, 255);
-    border-radius: 20px 20px 0 0;
+.description-right p {
+    color: var(--gray);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-.card .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    position: relative;
-    z-index: 100;
+.logo1 {
+    position: absolute ;
+    top: 1100%;
+    left: 22%;
 }
 
-.card .media-icons {
-    margin-top: 18px;
+.logo2 {
+    position: absolute ;
+    text-align: center;
+    top: 1100%;
+    left: 45%;
 }
 
-.card .media-icons i{
-    cursor: pointer;
-    color: black;
+.logo3 {
+    position: absolute ;
+    text-align: center;
+    top: 1120%;
+    left: 71%;
 }
 
-.card .name-noRegis-class {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.name-noRegis-class .name {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.name-noRegis-class .noRegis {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.name-noRegis-class .class {
-    font-size: 15px;
-    font-weight: 500;
+.content-container {
+    color: white;
+    position: absolute ;
+    text-align: center;
+    top: 1000%;
+    left: 42%;
 }
